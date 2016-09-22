@@ -1,7 +1,7 @@
-int driveY = vexRT[Ch1]; //fwd
-int driveX = vexRT[Ch3]; //turn
-int strafe = vexRT[Ch2]; //strafe
-int DEADZONE = 15;
+/*int driveY = vexRT[Ch3]; //fwd
+int strafe = vexRT[Ch3]; //strafe
+int driveX = vexRT[Ch2]; //driveX */
+//int DEADZONE = 15;
 
 
 void updateDriveMotors(int left, int right)
@@ -14,23 +14,23 @@ void updateDriveMotors(int left, int right)
 
 void drive()
 {
-	if(abs(driveY) > DEADZONE)
+	if(abs(vexRT[Ch3]) > 15 && abs(vexRT[Ch3]) > abs(vexRT[Ch4]))				// FWD REV
 	{
-		updateDriveMotors(driveY, driveY);
+		updateDriveMotors(vexRT[Ch3], vexRT[Ch3]);
 	}
-	else if(abs(driveX) > DEADZONE)
+	else if(abs(vexRT[Ch4]) > 15 && abs(vexRT[Ch4]) > abs(vexRT[Ch2])) //STRAFING
 	{
-		updateDriveMotors(driveX, driveX);
+		motor[front_right_drive] = -vexRT[Ch4];
+		motor[front_left_drive] = vexRT[Ch4];
+		motor[back_left_drive] = -vexRT[Ch4];
+		motor[back_right_drive] = vexRT[Ch4];
 	}
-	else if(abs(strafe) > DEADZONE)
+	else if(abs(vexRT[Ch1]) > 15 && abs(vexRT[Ch1]) > abs(vexRT[Ch2]))
 	{
-		motor[front_right_drive] = strafe;
-		motor[front_left_drive] = -strafe;
-		motor[back_left_drive] = strafe;
-		motor[back_right_drive] = -strafe;
+		updateDriveMotors(vexRT[Ch1], -vexRT[Ch1]);
 	}
 	else
-	{vmdf dkbmkdf
+	{
 		updateDriveMotors(0, 0);
 	}
 }
