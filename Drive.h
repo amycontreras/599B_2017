@@ -20,10 +20,10 @@ void drive()
 	}
 	else if(abs(vexRT[Ch4]) > 15 && abs(vexRT[Ch4]) > abs(vexRT[Ch2])) //STRAFING
 	{
-		motor[front_right_drive] = -vexRT[Ch4];
-		motor[front_left_drive] = vexRT[Ch4];
-		motor[back_left_drive] = -vexRT[Ch4];
-		motor[back_right_drive] = vexRT[Ch4];
+		motor[front_right_drive] = vexRT[Ch4];
+		motor[front_left_drive] = -vexRT[Ch4];
+		motor[back_left_drive] = vexRT[Ch4];
+		motor[back_right_drive] = -vexRT[Ch4];
 	}
 	else if(abs(vexRT[Ch1]) > 15 && abs(vexRT[Ch1]) > abs(vexRT[Ch2]))
 	{
