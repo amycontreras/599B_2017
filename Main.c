@@ -33,17 +33,12 @@ void pre_auton()
 
 task autonomous()
 {
-	// .....................................................................................
-	// Insert user code here.
-	// .....................................................................................
-
 	AutonomousCodePlaceholderForTesting();  // Remove this function call once you have "real" code.
 }
 
 
 task usercontrol()
 {
-	// User control code here, inside the loop
 
 	while (true)
 	{
