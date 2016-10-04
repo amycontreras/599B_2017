@@ -43,7 +43,8 @@ task usercontrol()
 	while (true)
 	{
 		drive();
+		driveVariables();
 		catapult();
-
+		catVariables();
 	}
 }
