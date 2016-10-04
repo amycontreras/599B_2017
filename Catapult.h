@@ -1,3 +1,12 @@
+int cocksBack;
+int shootFwd;
+
+void catVariables()
+{
+	shootFwd = vexRT[Btn5U];
+	cocksBack = vexRT[Btn6U];
+}
+
 void updateCatMotors(int speed)
 {
 	motor[top_left_cat] = -speed;
@@ -8,11 +17,11 @@ void updateCatMotors(int speed)
 
 void catapult()
 {
-	if(vexRT[Btn6U] == 1)
+	if(cocksBack == 1)
 	{
 		updateCatMotors(100);
 	}
-	else if(vexRT[Btn5U] == 1)
+	else if(shootFwd == 1)
 	{
 		updateCatMotors(-100);
 	}
