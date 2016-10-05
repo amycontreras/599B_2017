@@ -1,8 +1,10 @@
+// DRIVE VARIABLES
 int driveY;
 int strafe;
 int driveX;
 int DEADZONE = 15;
 
+// UPDATING DRIVE VARIABLES
 void driveVariables()
 {
 	driveY = vexRT[Ch3];
@@ -10,6 +12,9 @@ void driveVariables()
 	strafe = vexRT[Ch4];
 }
 
+// This function is essentially a shortcut for our drive code.
+// It sets the left and right motors to the left and right side
+// of the robot, respectively. By doing so, we ca
 void updateDriveMotors(int left, int right)
 {
 	motor[front_right_drive] = right;

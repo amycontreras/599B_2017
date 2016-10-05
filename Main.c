@@ -15,9 +15,9 @@
 #pragma autonomousDuration(20)
 #pragma userControlDuration(120)
 
-#include "Vex_Competition_Includes.c"   //Main competition background code...do not modify!
-#include "Drive.h"
-#include "Catapult.h"
+#include "Vex_Competition_Includes.c"   // Main competition background code provided by ROBOTC for VEX Robotics.
+#include "Drive.h"											// Including the Drive file.
+#include "Catapult.h"										// Including the Catapult file.
 
 
 void pre_auton()
